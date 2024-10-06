@@ -9,15 +9,22 @@ const router = createRouter({
     //   component: HomeView,
     // },
     {
-       path: "/contador",
-       name: "contador",
-       component: () => import("../components/Contador.vue"),
+      path: "/contador",
+      name: "contador",
+      component: () => import('../modules/contador/components/Contador.vue'),
     },
     {
       path: "/lista-de-tareas",
       name: "ListaDeTareas",
-      component: () => import("../components/ListaDeTareas.vue"),
-   },
+      component: () =>
+        import("../modules/listaDeTareas/components/ListaDeTareas.vue"),
+    },
+    {
+      path: "/registrar",
+      name: "Registrar",
+      component: () =>
+        import("../modules/registro/views/Registrar.vue"),
+    },
   ],
 });
 
